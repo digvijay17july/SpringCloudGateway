@@ -17,6 +17,14 @@ spring:
               args:
                 name: testCircuitBreaker
                 fallbackUri: forward:/fallback/testService
+            - name: Logging
+              args:
+                baseMessage: "[ API GATEWAY- ]"
+                preLogger: true
+            - name: Logging
+              args:
+                baseMessage: "[ API GATEWAY-]"
+                postLogger: true
 server:
   port: 8088
 management:
